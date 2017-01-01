@@ -1,0 +1,10 @@
+name: Basis
+type: theme
+description: 'A port of the Basis theme from Backdrop CMS'
+package: Core
+
+libraries:
+- basis/global-styling
+
+core: '8.x'
+project: 'drupal'
