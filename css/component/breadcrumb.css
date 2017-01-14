@@ -2,25 +2,25 @@
  * @file
  * Breadcrumb styles.
  */
-.breadcrumb {
+.system-breadcrumb-block {
   overflow: hidden;
   margin: 1em 0;
 }
 
-.breadcrumb ol,
-.breadcrumb li {
+.system-breadcrumb-block ol,
+.system-breadcrumb-block li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.breadcrumb li {
+.system-breadcrumb-block li {
   position: relative;
   padding: 0 1em;
   float: left;
 }
 
-.breadcrumb li a {
+.system-breadcrumb-block li a {
   position: relative;
   z-index: 1;
   display: block;
@@ -29,7 +29,7 @@
   text-decoration: none;
 }
 
-.breadcrumb li:after {
+.system-breadcrumb-block li:after {
   content: '';
   position: absolute;
   top: 50%;
@@ -46,6 +46,6 @@
     rotate(45deg);
 }
 
-.breadcrumb li:last-child:after {
+.system-breadcrumb-block li:last-child:after {
   display: none;
 }

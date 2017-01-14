@@ -149,30 +149,30 @@ fieldset .fieldset-legend {
  * More layout styles included since they will effected by logo and
  * site name word size
  */
-.l-header {
+.layout__header {
   background: #20252e;
 }
 
 @media (min-width: 34em) {
-  .l-header-inner {
+  .layout__header-inner {
     min-height: 6.125rem;
   }
 }
 
-.l-header-inner {
+.layout__header-inner {
   color: #fff;
 }
 
-.l-header a {
+.layout__header a {
   color: #fff;
   text-decoration: none;
 }
 
-.l-header a:hover {
+.layout__header a:hover {
   color: #edf8ff;
 }
 
-.l-header a:active {
+.layout__header a:active {
   background: #114a75;
 }
 
@@ -230,7 +230,7 @@ fieldset .fieldset-legend {
   }
 }
 
-.l-header .site-name {
+.layout__header .site-name {
   font-weight: 200;
   text-align: center;
 }
@@ -277,7 +277,7 @@ fieldset .fieldset-legend {
   }
 }
 
-.l-header .block-system-main-menu {
+.layout__header .block-system-main-menu {
   text-align: center;
 }
 
@@ -286,33 +286,23 @@ fieldset .fieldset-legend {
  * More layout styles included since they'll be effected by menu item count
  * and word size
  */
-.header-menu {
-  /* Center menu at mobile */
-  text-align: center;
-}
-
-.header-menu > .links {
-  /* Center menu at mobile */
-  display: inline-block;
-}
-
-.l-header .menu,
-.l-header .menu > li {
+.layout__header .menu,
+.layout__header .menu > li {
   text-align: left;
 }
 
-.l-header .menu > li {
+.layout__header .menu > li {
   font-size: 1em;
 }
 
 @media (min-width: 34em) {
-  .l-header .menu > li {
+  .layout__header .menu > li {
     font-size: 1.125em;
   }
 }
 
 @media (min-width: 62em) {
-  .l-header .menu > li {
+  .layout__header .menu > li {
     font-size: 1.375em;
   }
 }
@@ -320,29 +310,23 @@ fieldset .fieldset-legend {
 /**
  * Responsive menu styles
  */
-.menu-dropdown ul {
-  background: rgba(0, 0, 0, 0.25);
-  border-bottom-color: #20252e;
-}
 
 .js .menu-dropdown > li {
   border-bottom-color: #114a75;
 }
 
-.menu-dropdown a.disabled {
+.menu-dropdown a.disabled,
+.layout__header .menu a.disabled {
   color: #bbbbbb;
 }
 
 @media (min-width: 48em) {
-  .menu-dropdown a.disabled {
-    color: #bbbbbb;
-  }
-
   .js .menu-dropdown ul ul {
     border-left-color: #20252e;
   }
 
-  .js .menu-dropdown > li:hover {
+  .js .menu-dropdown > li:hover,
+  .layout__header .menu > li:hover {
     background-color: #114a75;
   }
 
@@ -411,7 +395,7 @@ fieldset .fieldset-legend {
 /**
  * Footer styles
  */
-.l-footer {
+.layout__footer {
   border-top: 0.25rem solid #c6cad2;
   /* If footer text wraps, remove line-height & add padding styles to blocks */
   line-height: 3;
@@ -420,40 +404,52 @@ fieldset .fieldset-legend {
 }
 
 /**
- * Powered by Backdrop Block
+ * Powered by Drupal Block
  */
-.l-footer .block-system-powered-by a {
-  text-decoration: none;
+.block--powered-by a {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 1.5625em;
 }
 
-.l-footer .block-system-powered-by a:hover {
-  text-decoration: underline;
+.block--powered-by a:before,
+.block--powered-by a:after {
+  content: '';
+  position: absolute;
+  top: 1.0625em;
+  left: 0.3125em;
+  display: block;
 }
 
-.drop-lounging {
-  /* To make Drop larger/smaller, adjust the width below. */
-  width: 7em;
+.block--powered-by a:before {
+  border: 0.3125em solid transparent;
+  border-bottom-color: #0074bd;
+  border-top-width: 0;
+  border-bottom-width: 0.4375em;
+  -webkit-transform: translate(0.25em, -0.25em);
+  transform: translate(0.1875em, -0.3125em);
 }
 
-.drop-lounging:before {
-  /* Uncomment below to remove Drop, or remove markup from block--system--powered-by.tpl.php */
-  /* display: none; */
-  background-image: url("../images/drop-lounging.png");
+.block--powered-by a:after {
+  width: 1em;
+  height: 1em;
+  border-radius: 100%;
+  background: #0074bd;
 }
 
 /**
  * Breadcrumb
  */
-.breadcrumb {
+.system-breadcrumb-block {
   background: #dee2ea;
 }
 
-.breadcrumb a {
+.system-breadcrumb-block a {
   color: #000;
 }
 
 /* Arrow color */
-.breadcrumb li:after {
+.system-breadcrumb-block li:after {
   border-color: #fff;
 }
 
@@ -461,6 +457,7 @@ fieldset .fieldset-legend {
 /**
  * Tabledrag
  */
+/*
 .draggable a.tabledrag-handle {
   background: #ebeff7;
 }
@@ -472,29 +469,29 @@ fieldset .fieldset-legend {
 
 tr.draggable .handle,
 tr.draggable .handle .handle-inner {
-  background: #333; /* Resize icon color */
-}
+  background: #333;*/ /* Resize icon color */
+/*}
 
 tr.draggable .handle:before {
-  border-bottom-color: #333; /* Resize icon color */
-}
+  border-bottom-color: #333; *//* Resize icon color */
+/*}
 
 tr.draggable .handle:after {
-  border-top-color: #333; /* Resize icon color */
-}
+  border-top-color: #333; *//* Resize icon color */
+/*}
 
 tr.draggable .handle .handle-inner:before {
-  border-left-color: #333; /* Resize icon color */
-}
+  border-left-color: #333; *//* Resize icon color */
+/*}
 
 tr.draggable .handle .handle-inner:after {
-  border-right-color: #333; /* Resize icon color */
-}
+  border-right-color: #333; *//* Resize icon color */
+/*}
 
 abbr.tabledrag-changed {
   background: #FCE400;
 }
-
+*/
 /**
  * Status messages
  * Uncomment background-image styles to override, URL will need to be
@@ -507,7 +504,6 @@ abbr.tabledrag-changed {
 }
 
 div.status:before {
-  /* background-image: url(../../../misc/message-24-ok.png); */
   background-color: #CFDE56;
 }
 
@@ -518,7 +514,6 @@ div.status:before {
 }
 
 div.warning:before {
-  /* background-image: url(../../../misc/message-24-warning.png); */
   background-color: #FCE400;
 }
 
@@ -529,43 +524,7 @@ div.warning:before {
 }
 
 div.error:before {
-  /* background-image: url(../../../misc/message-24-error.png); */
   background-color: #EE3D23;
-}
-
-/* Desktop size icons */
-@media only screen and (min-width: 34em) {
-  div.status:before {
-    /* background-image: url(../../../misc/message-32-ok.png); */
-  }
-
-  div.warning:before {
-    /* background-image: url(../../../misc/message-32-warning.png); */
-  }
-
-  div.error:before {
-    /* background-image: url(../../../misc/message-32-error.png); */
-  }
-}
-
-/**
- * SVG overrides for status messages
- * Using linear-gradient so the style only applies to browsers that can render
- * SVGs.
- */
-div.status:before {
-  /* background-image: -webkit-linear-gradient(transparent, transparent), url(../../../misc/message-ok.svg); */
-  /* background-image: linear-gradient(transparent, transparent), url(../../../misc/message-ok.svg); */
-}
-
-div.warning:before {
-  /* background-image: -webkit-linear-gradient(transparent, transparent), url(../../../misc/message-warning.svg); */
-  /* background-image: linear-gradient(transparent, transparent), url(../../../misc/message-warning.svg); */
-}
-
-div.error:before {
-  /* background-image: -webkit-linear-gradient(transparent, transparent), url(../../../misc/message-error.svg); */
-  /* background-image: linear-gradient(transparent, transparent), url(../../../misc/message-error.svg); */
 }
 
 /**
@@ -637,6 +596,10 @@ button.button-primary,
   background: #0074bd;
 }
 
+.button:hover,
+.button:focus,
+input.button:hover,
+input.button:focus,
 input.button-primary:hover,
 input.button-primary:focus,
 button.button-primary:hover,
@@ -931,20 +894,20 @@ ul.action-links a {
 /**
  * Primary admin tabs
  */
-nav.tabs:before {
+.local-tasks-block:before {
   /* Background behind primary tabs */
   background-color: #586172;
 }
 
-ul.primary {
+.local-tasks-block > ul {
   font-size: 0.9375em;
   text-transform: uppercase;
 }
 
-ul.primary li a,
-ul.primary li a:visited,
-ul.primary li a:hover,
-ul.primary li.active a,
+.local-tasks-block > ul li a,
+.local-tasks-block > ul li a:visited,
+.local-tasks-block > ul li a:hover,
+.local-tasks-block > ul li.active a,
 .expand-dropdown-tabs-control,
 .responsive-tabs-mobile .expand-dropdown-tabs-control:before,
 .responsive-tabs-mobile .expand-dropdown-tabs-label {
@@ -953,18 +916,17 @@ ul.primary li.active a,
   background-color: #dee2ea;
 }
 
-ul.primary li.active a,
-ul.primary li.active a.active,
-ul.primary li.active a:active,
-ul.primary li.active a:visited,
+.local-tasks-block > ul li a.is-active,
+.local-tasks-block > ul li.active a:active,
+.local-tasks-block > ul li.active a:visited,
 .responsive-tabs-mobile .expand-dropdown-tabs-label {
   color: #000;
   background-color: #fff;
   font-weight: bold;
 }
 
-ul.primary li a:hover,
-ul.primary li a:focus,
+.local-tasks-block > ul li a:hover,
+.local-tasks-block > ul li a:focus,
 .expand-dropdown-tabs-control:hover,
 .expand-dropdown-tabs-control:focus,
 .responsive-tabs-mobile .expand-dropdown-tabs-control:hover:before,
@@ -975,7 +937,7 @@ ul.primary li a:focus,
   background: #bcc2cc;
 }
 
-ul.primary li a:active,
+.local-tasks-block > ul li a:active,
 .expand-dropdown-tabs-control:active,
 .responsive-tabs-mobile .expand-dropdown-tabs-control:active:before {
   background: #dee2ea;
@@ -1020,7 +982,7 @@ ul.secondary li a:active {
 /**
  * Responsive tabs
  */
-.responsive-tabs-mobile ul.primary {
+.responsive-tabs-mobile .local-tasks-block > ul {
   background: #fff;
 }
 
@@ -1072,22 +1034,22 @@ ul.secondary li a:active {
   border-top-color: #bcc2cc;
 }
 
-.responsive-tabs-mobile ul.primary,
-.responsive-tabs-mobile.expand-dropdown-tabs ul.primary {
+.responsive-tabs-mobile .local-tasks-block > ul,
+.responsive-tabs-mobile.expand-dropdown-tabs .local-tasks-block > ul {
   background: #fff;
 }
 
-.responsive-tabs-mobile ul.primary,
-.expand-dropdown-tabs.responsive-tabs-mobile ul.primary {
+.responsive-tabs-mobile .local-tasks-block > ul,
+.expand-dropdown-tabs.responsive-tabs-mobile .local-tasks-block > ul {
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 4px;
 }
 
-.responsive-tabs-mobile ul.primary li {
+.responsive-tabs-mobile .local-tasks-block > ul li {
   border-bottom-color: #fff;
 }
 
-.responsive-tabs-mobile ul.primary a:after {
+.responsive-tabs-mobile .local-tasks-block > ul a:after {
   background: #bcc2cc;
 }
 

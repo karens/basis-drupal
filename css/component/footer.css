@@ -2,45 +2,45 @@
  * @file
  * Site Footer styles.
  */
-.l-footer {
+.layout__footer {
   margin: 1.5rem 0 0;
 }
 
-.l-footer a {
+.layout__footer a {
   text-decoration: none;
 }
 
-.l-footer a:hover,
-.l-footer a:focus {
+.layout__footer a:hover,
+.layout__footer a:focus {
   text-decoration: underline;
 }
 
 /**
  * Footer menu styles
  */
-.l-footer .menu,
-.l-footer .menu li {
+.layout__footer .menu,
+.layout__footer .menu li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.l-footer .menu:after {
+.layout__footer .menu:after {
   /* Clearfix menus */
   content: '';
   display: table;
   clear: both;
 }
 
-.l-footer .menu > li {
+.layout__footer .menu > li {
   float: left;
 }
 
-[dir="rtl"] .l-footer .menu > li {
+[dir="rtl"] .layout__footer .menu > li {
   float: right;
 }
 
-.l-footer .menu a {
+.layout__footer .menu a {
   display: block;
   padding: 0 1rem;
 }
@@ -48,11 +48,11 @@
 /**
  * Powered by Backdrop Block
  */
-.l-footer .block-system-powered-by a {
+.layout__footer .block-system-powered-by a {
   text-decoration: none;
 }
 
-.l-footer .block-system-powered-by a:hover {
+.layout__footer .block-system-powered-by a:hover {
   text-decoration: underline;
 }
 
@@ -79,6 +79,6 @@
   background-size: 100% auto;
 }
 
-.l-footer .block:first-child .drop-lounging:before {
+.layout__footer .block:first-child .drop-lounging:before {
   display: block;
 }

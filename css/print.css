@@ -7,7 +7,7 @@
     display: none;
   }
 
-  .l-header,
+  .layout__header,
   .breadcrumb,
   .pager-first,
   .pager-previous,
@@ -18,8 +18,8 @@
     background: transparent;
   }
 
-  .l-header a,
-  .l-header-inner,
+  .layout__header a,
+  .layout__header-inner,
   .breadcrumb,
   .breadcrumb li a,
   .pager-item a,

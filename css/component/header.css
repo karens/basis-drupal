@@ -3,12 +3,13 @@
  * Header region styling.
  */
 @media (min-width: 34em) {
-  .l-header-inner {
+  .layout__header-inner {
     min-height: 6.125rem;
   }
 }
 
-.l-header a {
+.layout__header a,
+.layout__header .menu > li {
   -webkit-transition: background-color 0.25s ease-out;
   transition: background-color 0.25s ease-out;
 }
@@ -74,7 +75,7 @@
   margin: 0;
 }
 
-.l-header .block-system-header .block-content:after {
+.layout__header .block-system-header .block-content:after {
   /* Clearfix header block */
   content: "";
   display: table;
@@ -84,104 +85,42 @@
 /**
  * Menus in header area
  */
-.header-menu {
-  clear: both;
-}
-
-.header-menu:after {
-  /* Clearfix header menu */
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.header-menu > .links {
-  /* Center menu at mobile */
-  display: inline-block;
-}
-
-@media (min-width: 48em) {
-  .header-menu {
-    float: right;
-    clear: none;
-  }
-
-  [dir="rtl"] .header-menu {
-    float: left;
-    clear: none;
-  }
-}
-
 @media (min-width: 34em) {
-  .l-header .block-system-main-menu {
+  .layout__header .block-system-main-menu {
     clear: both;
   }
 }
 
-.l-header .menu,
-.l-header .menu li {
+.layout__header .menu,
+.layout__header .menu li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.l-header .menu:after {
+.layout__header .menu:after {
   /* Clearfix menus */
   content: '';
   display: table;
   clear: both;
 }
 
-.l-header .menu > li,
-.header-menu li {
+.layout__header .menu > li {
   float: left;
 }
 
-[dir="rtl"] .l-header .menu > li,
-[dir="rtl"] .header-menu li {
+[dir="rtl"] .layout__header .menu > li {
   float: right;
 }
 
-.l-header .menu a,
-.header-menu a {
+.layout__header .menu a {
   display: block;
   padding: 1rem 1.25rem;
 }
 
 @media (min-width: 34em) {
   /* Specific selector to avoid contextual links */
-  .l-header .menu a,
-  .header-menu a {
+  .layout__header .menu a {
     padding: 1rem 1.25rem;
   }
-}
-
-@media (min-width: 48em) {
-  .header-menu a {
-    /* Attempt at lining up baseline of site name and header menu */
-    padding-top: 1.9375rem;
-    padding-bottom: 1.0625rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 62em) {
-  .header-menu a {
-    /* Attempt at lining up baseline of site name and header menu */
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-.header-menu .links,
-.header-menu li {
-  margin: 0;
-  padding: 0;
-}
-
-.header-menu .links li:before,
-.header-menu .links li:after {
-  /* Hides arrows intented for action links in body */
-  display: none;
 }
