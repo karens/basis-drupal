@@ -1,5 +1,5 @@
 # Basis Theme
-Default theme in Backdrop.
+A port of the default theme in Backdrop.
 
 ## Responsive Strategy
 Media queries and other responsive code should be mobile first. This means all

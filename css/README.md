@@ -17,6 +17,3 @@ A good way to think about overriding files:
  Declare it in your .info file with the same file name.
  The file in Basis with the same name will not be loaded. The file in the active
  theme will be used in it's place.
-
- # CSS Guidelines
- [See Backdrop's CSS Standards](https://api.backdropcms.org/css-standards)

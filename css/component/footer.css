@@ -2,83 +2,45 @@
  * @file
  * Site Footer styles.
  */
-.layout__footer {
+.l-footer {
   margin: 1.5rem 0 0;
 }
 
-.layout__footer a {
+.l-footer a {
   text-decoration: none;
 }
 
-.layout__footer a:hover,
-.layout__footer a:focus {
+.l-footer a:hover,
+.l-footer a:focus {
   text-decoration: underline;
 }
 
 /**
  * Footer menu styles
  */
-.layout__footer .menu,
-.layout__footer .menu li {
+.l-footer .menu,
+.l-footer .menu li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.layout__footer .menu:after {
+.l-footer .menu:after {
   /* Clearfix menus */
   content: '';
   display: table;
   clear: both;
 }
 
-.layout__footer .menu > li {
+.l-footer .menu > li {
   float: left;
 }
 
-[dir="rtl"] .layout__footer .menu > li {
+[dir="rtl"] .l-footer .menu > li {
   float: right;
 }
 
-.layout__footer .menu a {
+.l-footer .menu a {
   display: block;
   padding: 0 1rem;
-}
-
-/**
- * Powered by Backdrop Block
- */
-.layout__footer .block-system-powered-by a {
-  text-decoration: none;
-}
-
-.layout__footer .block-system-powered-by a:hover {
-  text-decoration: underline;
-}
-
-.drop-lounging {
-  position: relative;
-  width: 7em;
-}
-
-.drop-lounging:before {
-  content: '';
-  position: absolute;
-  top: -0.75em;
-  left: 50%;
-  left: calc(50% + 1.25em);
-  display: none; /* Default hidden unless certain criteria are met */
-  box-sizing: content-box;
-  width: 100%;
-  height: 0;
-  margin: 0;
-  padding: 0 0 52%;
-  -webkit-transform: translate(-50%, -82%);
-  transform: translate(-50%, -82%);
-  background: url("../images/drop-lounging.png") no-repeat;
-  background-size: 100% auto;
-}
-
-.layout__footer .block:first-child .drop-lounging:before {
-  display: block;
 }

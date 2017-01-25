@@ -70,31 +70,31 @@
 
 /* Images originate in here instead of skin to avoid breaking in sub-themes */
 div.status:before {
-  background-image: url(../../../misc/message-24-ok.png);
+  background-image: url(../../images/system/message-24-ok.png);
 }
 
 /* Warning status message */
 div.warning:before {
-  background-image: url(../../../misc/message-24-warning.png);
+  background-image: url(../../images/system/message-24-warning.png);
 }
 
 /* Error status message */
 div.error:before {
-  background-image: url(../../../misc/message-24-error.png);
+  background-image: url(../../images/system/message-24-error.png);
 }
 
 /* Desktop size icons */
 @media only screen and (min-width: 34em) {
   div.status:before {
-    background-image: url(../../../misc/message-32-ok.png);
+    background-image: url(../../images/system/message-32-ok.png);
   }
 
   div.warning:before {
-    background-image: url(../../../misc/message-32-warning.png);
+    background-image: url(../../images/system/message-32-warning.png);
   }
 
   div.error:before {
-    background-image: url(../../../misc/message-32-error.png);
+    background-image: url(../../images/system/message-32-error.png);
   }
 }
 
@@ -104,16 +104,28 @@ div.error:before {
  * SVGs.
  */
 div.status:before {
-  background-image: -webkit-linear-gradient(transparent, transparent), url(../../../../misc/message-ok.svg);
-  background-image: linear-gradient(transparent, transparent), url(../../../../misc/message-ok.svg);
+  background-image:
+    -webkit-linear-gradient(transparent, transparent),
+    url(../../images/system/message-ok.svg);
+  background-image:
+    linear-gradient(transparent, transparent),
+    url(../../images/system/message-ok.svg);
 }
 
 div.warning:before {
-  background-image: -webkit-linear-gradient(transparent, transparent), url(../../../../misc/message-warning.svg);
-  background-image: linear-gradient(transparent, transparent), url(../../../../misc/message-warning.svg);
+  background-image:
+    -webkit-linear-gradient(transparent, transparent),
+    url(../../images/system/message-warning.svg);
+  background-image:
+    linear-gradient(transparent, transparent),
+    url(../../images/system/message-warning.svg);
 }
 
 div.error:before {
-  background-image: -webkit-linear-gradient(transparent, transparent), url(../../../../misc/message-error.svg);
-  background-image: linear-gradient(transparent, transparent), url(../../../../misc/message-error.svg);
+  background-image:
+    -webkit-linear-gradient(transparent, transparent),
+    url(../../images/system/message-error.svg);
+  background-image:
+    linear-gradient(transparent, transparent),
+    url(../../images/system/message-error.svg);
 }

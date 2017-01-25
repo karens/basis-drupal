@@ -1,38 +1,36 @@
-@media print {
-  html.admin-bar body {
-    padding-top: 0;
-  }
+html.admin-bar body {
+  padding-top: 0;
+}
 
-  .tabs {
-    display: none;
-  }
+.tabs {
+  display: none;
+}
 
-  .layout__header,
-  .breadcrumb,
-  .pager-first,
-  .pager-previous,
-  .pager-ellipsis,
-  .pager-next,
-  .pager-last,
-  .pager-item {
-    background: transparent;
-  }
+.l-header,
+.breadcrumb,
+.pager-first,
+.pager-previous,
+.pager-ellipsis,
+.pager-next,
+.pager-last,
+.pager-item {
+  background: transparent;
+}
 
-  .layout__header a,
-  .layout__header-inner,
-  .breadcrumb,
-  .breadcrumb li a,
-  .pager-item a,
-  .pager-first,
-  .pager-previous a,
-  .pager-ellipsis,
-  .pager-next a,
-  .pager-last a,
-  .pager-item {
-    color: #000;
-  }
+.l-header a,
+.l-header-inner,
+.breadcrumb,
+.breadcrumb li a,
+.pager-item a,
+.pager-first,
+.pager-previous a,
+.pager-ellipsis,
+.pager-next a,
+.pager-last a,
+.pager-item {
+  color: #000;
+}
 
-  .breadcrumb li:after {
-    border-color: #000;
-  }
+.breadcrumb li:after {
+  border-color: #000;
 }

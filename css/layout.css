@@ -3,7 +3,7 @@
  * Component Layout CSS and some Page layout overrides
  */
 
-.layout__header {
+.l-header {
   position: relative;
   margin: 0 0 2rem;
 }

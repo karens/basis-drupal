@@ -59,20 +59,16 @@ fieldset .fieldset-wrapper {
   padding: 0 15px 13px 13px;
 }
 
-.js fieldset.collapsible .fieldset-title,
-.form-wrapper--collapsible__title {
+.js fieldset.collapsible .fieldset-title {
   position: relative;
   z-index: 1;
   display: block;
   width: 100%;
+  padding: 0.3em 0.3em 0.3em 1.8em;
+  margin: 0 -0.5em;
   border-radius: 4px;
   background: transparent;
   text-decoration: none;
-}
-
-.js fieldset.collapsible .fieldset-title {
-  padding: 0.3em 0.3em 0.3em 1.8em;
-  margin: 0 -0.5em;
 }
 
 .js fieldset.collapsible .fieldset-legend a:before {
