@@ -1,0 +1,121 @@
+/**
+ * CSS Necessary for JS Dropdown
+ */
+.menu-toggle ~ .l-header-menu-wrapper,
+.menu-toggle:not(:checked) ~ .l-header-menu-wrapper {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.25s ease-in-out;
+}
+
+.menu-toggle:checked ~ .l-header-menu-wrapper {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Necessary to switch from burger menu */
+@media (min-width: 62em) {
+  .menu-toggle ~ .l-header-menu-wrapper,
+  .l-header-menu-wrapper,
+  .menu-toggle:checked ~ .l-header-menu-wrapper {
+    height: auto;
+    overflow: visible;
+  }
+}
+
+.menu-toggle-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  padding: 2.9375em 1.25em 1.75em 3em;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Necessary to switch from burger menu */
+/* Moved to skin.css */
+/*
+@media (min-width: 62em) {
+  .menu-toggle-button {
+    position: relative;
+    top: auto;
+    right: auto;
+    float: left;
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transform: translate(0, 0.75em);
+    transform: translate(0, 0.75em);
+  }
+
+  .menu-toggle-button,
+  .burger-toggler__state {
+    display: none;
+  }
+}*/
+
+.menu-toggle-button-icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0.875em;
+  background: transparent;
+  -webkit-transform: translate(0, 0.4375em) scale(0.6);
+  transform: translate(0, 0.4375em) scale(0.6);
+}
+
+.menu-toggle-button-icon:before,
+.menu-toggle-button-icon:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  display: block;
+  width: 2.5em;
+  background: transparent;
+}
+
+.menu-toggle-button-icon:before {
+  height: 0;
+  border-top: 0.25em solid #fff;
+  background: #fff;
+  -webkit-transform: translate(0, -0.75em);
+  transform: translate(0, -0.75em);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.menu-toggle:checked ~ .menu-toggle-button .menu-toggle-button-icon:before {
+  -webkit-transform: translate(0, -0.75em) rotate(45deg);
+  transform: translate(0, -0.75em) rotate(45deg);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+}
+
+.menu-toggle-button-icon:after {
+  height: 1em;
+  border: 0.25em solid #fff;
+  border-width: 0.25em 0 0.25em 0;
+  -webkit-transition: border 0.2s, -webkit-transform 0.2s;
+  transition: border 0.2s, -webkit-transform 0.2s;
+  transition: border 0.2s, transform 0.2s;
+  transition: border 0.2s, transform 0.2s, -webkit-transform 0.2s;
+}
+
+.menu-toggle:checked ~ .menu-toggle-button .menu-toggle-button-icon:after {
+  -webkit-transform: translate(0.375em, 0) rotate(-45deg);
+  transform: translate(0.375em, 0) rotate(-45deg);
+  border-top-color: transparent;
+  -webkit-transform-origin: left 1.5em;
+  transform-origin: left 1.5em;
+}

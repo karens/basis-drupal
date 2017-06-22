@@ -83,7 +83,15 @@
         </a>
       <?php endif; ?>
 
-      <?php print render($page['header']); ?>
+      <input id="menu-toggle" class="menu-toggle element-invisible" type="checkbox" aria-controls="menu-toggle">
+      <label class="menu-toggle-button" for="menu-toggle">
+        <span class="menu-toggle-button-icon"></span>
+        <span class="menu-toggle-button-text">Menu</span>
+        <span class="menu-toggle-assistive-text element-invisible">Toggle menu visibility</span>
+      </label>
+      <div class="l-header-menu-wrapper">
+        <?php print render($page['header']); ?>
+      </div>
     </div>
   </header>
 
@@ -107,7 +115,7 @@
       </div>
     <?php endif; ?>
 
-    <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+    <?php if (!empty($tabs['#primary']) || !empty($tabs['#secondary'])): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
     <?php print render($page['help']); ?>
     <?php if ($action_links): ?>
       <ul class="action-links"><?php print render($action_links); ?></ul>

@@ -399,6 +399,46 @@ fieldset .fieldset-legend {
   }
 }
 
+/**
+ * CSS Necessary for JS Dropdown
+ */
+.menu-toggle-button-icon:before {
+  border-top-color: #b00;
+  background: #b00;
+}
+
+.menu-toggle-button-icon:after {
+  height: 1em;
+  border-color: #b00;
+}
+
+/* Necessary to switch from burger full menu */
+/* Change min-width to alter breakpoint */
+@media (min-width: 62em) {
+  .menu-toggle ~ .l-header-menu-wrapper,
+  .l-header-menu-wrapper,
+  .menu-toggle:checked ~ .l-header-menu-wrapper {
+    height: auto;
+    overflow: visible;
+  }
+
+  .menu-toggle-button {
+    position: relative;
+    top: auto;
+    right: auto;
+    float: left;
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transform: translate(0, 0.75em);
+    transform: translate(0, 0.75em);
+  }
+
+  .menu-toggle-button,
+  .burger-toggler__state {
+    display: none;
+  }
+}
+
 
 /**
  * Footer styles

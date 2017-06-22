@@ -6,12 +6,12 @@
 /**
  * Primary admin tabs
  */
-nav.tabs {
+div.tabs {
   position: relative;
   padding: 0.75em 0.5em 0;
 }
 
-nav.tabs:before {
+div.tabs:before {
   content: '';
   position: absolute;
   top: 0;
