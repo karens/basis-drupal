@@ -1,5 +1,4 @@
 global-styling:
-  version: VERSION
   css:
     base:
       css/base.css: {}
@@ -12,12 +11,11 @@ global-styling:
       css/component/footer.css: {}
       css/component/menu-dropdown.css: {}
       css/component/drupal-form.css: {}
-      # css/component/tabledrag.css: {}
+      css/component/tabledrag.css: {}
       css/component/vertical-tabs.css: {}
       css/component/fieldset.css: {}
       css/component/dialog.css: {}
       css/component/progress.css: {}
-      css/component/status-messages.css: {}
       css/component/admin-tabs.css: {}
       css/component/breadcrumb.css: {}
       css/component/pager.css: {}
@@ -27,3 +25,7 @@ global-styling:
       css/skin.css: {}
       css/print.css: {}
 
+messages:
+  css:
+    component:
+      css/component/status-messages.css: {}

@@ -1,11 +1,19 @@
 name: Basis
 type: theme
 description: 'A port of the Basis theme from Backdrop CMS'
-package: Core
+core: '8.x'
+project: 'drupal'
 
 libraries:
 - core/normalize
 - basis/global-styling
+
+libraries-override:
+  # Overrode to change handle markup, no other changes
+  core/drupal.tabledrag:
+    js:
+      misc/tabledrag.js: js/tabledrag.js
+
 
 regions:
   header: 'Header'
@@ -19,5 +27,3 @@ regions:
   sidebar_second: 'Secondary Sidebar'
   footer: Footer
 
-core: '8.x'
-project: 'drupal'

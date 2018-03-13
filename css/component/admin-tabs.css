@@ -6,12 +6,12 @@
 /**
  * Primary admin tabs
  */
-.local-tasks-block {
+.block-local-tasks-block {
   position: relative;
   padding: 0.75em 0.5em 0;
 }
 
-.local-tasks-block:before {
+.block-local-tasks-block:before {
   content: '';
   position: absolute;
   top: 0;
@@ -19,7 +19,7 @@
   z-index: 0;
   display: block;
   width: 100%;
-  height: 3.1875em;
+  height: 3.0625em;
   transform: translate(-50%, 0);
 }
 
@@ -29,7 +29,7 @@
   clear: both;
 }
 
-.local-tasks-block > ul {
+.tabs.primary {
   position: relative;
   clear: both;
   box-sizing: border-box;
@@ -42,11 +42,11 @@
   text-transform: uppercase;
 }
 
-[dir="rtl"] .local-tasks-block > ul {
+[dir="rtl"] .tabs.primary {
   float: right;
 }
 
-.local-tasks-block > ul li {
+.tabs.primary > li {
   position: relative;
   z-index: 1;
   float: left; /* LTR */
@@ -54,21 +54,21 @@
   list-style: none;
 }
 
-[dir="rtl"] .local-tasks-block > ul li {
+[dir="rtl"] .tabs li {
   float: right;
 }
 
-.local-tasks-block > ul li a,
-.local-tasks-block > ul li a:visited,
-.local-tasks-block > ul li a:hover,
-.local-tasks-block > ul li.active a,
+.tabs li a,
+.tabs li a:visited,
+.tabs li a:hover,
+.tabs li.active a,
 .expand-dropdown-tabs-control,
 .responsive-tabs-mobile .expand-dropdown-tabs-control:before,
 .responsive-tabs-mobile .expand-dropdown-tabs-label {
   position: relative;
   z-index: 1;
   display: block;
-  padding: 12px 20px;
+  padding: 0.75em 1.25em;
   text-decoration: none;
   border: 0;
   border-right: 0.125rem solid #586172; /* LTR */
@@ -81,12 +81,12 @@
   will-change: background-color, color;
 }
 
-[dir="rtl"] .local-tasks-block > ul li a,
-[dir="rtl"] .local-tasks-block > ul li a.active,
-[dir="rtl"] .local-tasks-block > ul li a:active,
-[dir="rtl"] .local-tasks-block > ul li a:visited,
-[dir="rtl"] .local-tasks-block > ul li a:hover,
-[dir="rtl"] .local-tasks-block > ul li.active a,
+[dir="rtl"] .tabs.primary li a,
+[dir="rtl"] .tabs.primary li a.active,
+[dir="rtl"] .tabs.primary li a:active,
+[dir="rtl"] .tabs.primary li a:visited,
+[dir="rtl"] .tabs.primary li a:hover,
+[dir="rtl"] .tabs.primary li.active a,
 [dir="rtl"] .expand-dropdown-tabs-control,
 [dir="rtl"] .responsive-tabs-mobile .expand-dropdown-tabs-control:before,
 [dir="rtl"] .responsive-tabs-mobile .expand-dropdown-tabs-label {
@@ -95,40 +95,40 @@
   border-left-style: solid;
 }
 
-.local-tasks-block > ul li:first-child a {
-  -webkit-border-radius: 4px 0 0 0;
-  -moz-border-radius: 4px 0 0 0;
-  border-radius: 4px 0 0 0;
+.tabs.primary li:first-child a {
+  -webkit-border-radius: 0.25em 0 0 0;
+  -moz-border-radius: 0.25em 0 0 0;
+  border-radius: 0.25em 0 0 0;
 }
 
 .expand-dropdown-tabs-control,
-.local-tasks-block > ul li:last-child a {
-  -webkit-border-radius: 0 4px 0 0;
-  -moz-border-radius: 0 4px 0 0;
-  border-radius: 0 4px 0 0;
+.tabs.primary li:last-child a {
+  -webkit-border-radius: 0 0.25em 0 0;
+  -moz-border-radius: 0 0.25em 0 0;
+  border-radius: 0 0.25em 0 0;
   border-right: 0;
 }
 
-[dir="rtl"] .local-tasks-block > ul li:first-child a {
-  -webkit-border-radius: 0 4px 0 0;
-  -moz-border-radius: 0 4px 0 0;
-  border-radius: 0 4px 0 0;
+[dir="rtl"] .tabs.primary li:first-child a {
+  -webkit-border-radius: 0 0.25em 0 0;
+  -moz-border-radius: 0 0.25em 0 0;
+  border-radius: 0 0.25em 0 0;
 }
 
 [dir="rtl"] .expand-dropdown-tabs-control,
-[dir="rtl"] .local-tasks-block > ul li:last-child a {
-  -webkit-border-radius: 4px 0 0 0;
-  -moz-border-radius: 4px 0 0 0;
-  border-radius: 4px 0 0 0;
+[dir="rtl"] .tabs.primary li:last-child a {
+  -webkit-border-radius: 0.25em 0 0 0;
+  -moz-border-radius: 0.25em 0 0 0;
+  border-radius: 0.25em 0 0 0;
   border-right: 0;
 }
 
 @media (max-width: 34em) {
-  .local-tasks-block > ul li {
+  .tabs.primary li {
     float: none;
     margin-bottom: 2px;
   }
-  .js .local-tasks-block > ul li {
+  .js .tabs.primary li {
     float: left;
   }
 }
@@ -136,7 +136,7 @@
 /**
  * Secondary admin tabs
  */
-ul.secondary {
+.tabs.secondary {
   padding: 16px 23px 6px;
   margin: 0 -20px 0;
   line-height: 1.385;
@@ -145,12 +145,12 @@ ul.secondary {
   border: 0;
 }
 
-ul.secondary li {
+.tabs.secondary li {
   display: inline-block;
   margin: 0 5px 10px;
 }
 
-ul.secondary li a {
+.tabs.secondary li a {
   display: block;
   border: 2px solid #e3e2e2;
   text-decoration: none;
@@ -159,10 +159,10 @@ ul.secondary li a {
     color 0.6s ease;
 }
 
-ul.secondary li a,
-ul.secondary li a:hover,
-ul.secondary li.active a,
-ul.secondary li.active a.active {
+.tabs.secondary li a,
+.tabs.secondary li a:hover,
+.tabs.secondary li.active a,
+.tabs.secondary li.active a.active {
   padding: .36em 1em;
   -webkit-border-radius: 1.45em;
   -moz-border-radius: 1.45em;

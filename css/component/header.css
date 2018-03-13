@@ -14,72 +14,67 @@
   transition: background-color 0.25s ease-out;
 }
 
-.header-identity-wrapper:after {
+.system-branding-block,
+.header-identity:after {
   /* Clearfix */
   content: '';
   display: table;
   clear: both;
 }
-.header-identity-wrapper strong {
+.header-identity strong {
   font-weight: inherit;
 }
 
 @media (min-width: 48em) {
-  .header-identity-wrapper {
+  .header-identity {
     display: block;
     float: left;
   }
 
-  [dir="rtl"] .header-identity-wrapper {
+  [dir="rtl"] .header-identity {
     float: right;
   }
 }
 
-.header-site-name-wrapper {
+.header-identity__site-name {
   margin: 0;
   padding: 0;
   overflow-wrap: break-word;
 }
 
 @media (min-width: 34em) {
-  .header-site-name-wrapper {
+  .header-identity__site-name {
     float: left;
   }
 
-  [dir="rtl"] .header-site-name-wrapper {
+  [dir="rtl"] .header-identity__site-name {
     float: right;
   }
 }
 
-.header-logo-wrapper {
+.header-identity__logo-link {
   display: block;
   float: left;
 }
 
-[dir="rtl"] .header-logo-wrapper {
+[dir="rtl"] .header-identity__logo-link {
   float: right;
 }
 
-/* Makes sure images that are tall logos don't pop out of container */
-.header-logo-tall img {
+/* @todo make this work
+   Makes sure images that are tall logos don't pop out of container */
+.header-identity__logo--tall {
   width: auto;
   height: 100%;
 }
 
-.header-site-name-link {
+.header-identity__site-name {
   display: block;
   margin: 0;
 }
 
-.header-site-slogan {
+.header-identity__site-slogan {
   margin: 0;
-}
-
-.layout__header .block-system-header .block-content:after {
-  /* Clearfix header block */
-  content: "";
-  display: table;
-  clear: both;
 }
 
 /**

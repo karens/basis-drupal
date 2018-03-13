@@ -1,1 +1,16 @@
 <?php
+
+/**
+ * Implements template_preprocess_html
+ */
+function basis_preprocess_html(&$variables) {
+  // Load path args
+  $current_path = \Drupal::service('path.current')->getPath();
+  $path_args = explode('/', substr($current_path, 1));
+
+  // Set whether or not we're on a node edit page
+  $variables['is_node_edit'] = false;
+  if (isset($path_args[0]) && isset($path_args[2]) && $path_args[0] == 'node' && $path_args[2] == 'edit') {
+    $variables['is_node_edit'] = true;
+  }
+}

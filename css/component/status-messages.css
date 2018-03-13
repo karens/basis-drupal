@@ -22,7 +22,7 @@
   left: 0; /* LTR */
   width: 2.375em;
   height: 100%;
-  background-position: center .625em;
+  background-position: center 1em;
   background-repeat: no-repeat;
   background-size: 1.5em;
 }
@@ -35,10 +35,6 @@
 .messages :last-child {
   margin-bottom: 0;
   padding-bottom: 0;
-}
-
-.messages ul {
-  margin: 0;
 }
 
 @media only screen and (min-width: 34em) {
@@ -62,39 +58,39 @@
   right: 0;
 }
 
-.messages ul,
-.messages .item-list ul {
+.messages__list {
   margin-bottom: 0;
   margin-left: 0;
+  padding-left: 1.25em;
 }
 
 /* Images originate in here instead of skin to avoid breaking in sub-themes */
-div.status:before {
-  background-image: url(../../../misc/message-24-ok.png);
+.messages--status:before {
+  background-image: url(../../images/message-24-ok.png);
 }
 
 /* Warning status message */
-div.warning:before {
-  background-image: url(../../../misc/message-24-warning.png);
+.messages--warning:before {
+  background-image: url(../../images/message-24-warning.png);
 }
 
 /* Error status message */
-div.error:before {
-  background-image: url(../../../misc/message-24-error.png);
+.messages--error:before {
+  background-image: url(../../images/message-24-error.png);
 }
 
 /* Desktop size icons */
 @media only screen and (min-width: 34em) {
-  div.status:before {
-    background-image: url(../../../misc/message-32-ok.png);
+  .messages--status:before {
+    background-image: url(../../images/message-32-ok.png);
   }
 
-  div.warning:before {
-    background-image: url(../../../misc/message-32-warning.png);
+  .messages--warning:before {
+    background-image: url(../../images/message-32-warning.png);
   }
 
-  div.error:before {
-    background-image: url(../../../misc/message-32-error.png);
+  .messages--error:before {
+    background-image: url(../../images/message-32-error.png);
   }
 }
 
@@ -103,17 +99,17 @@ div.error:before {
  * Using linear-gradient so the style only applies to browsers that can render
  * SVGs.
  */
-div.status:before {
-  background-image: -webkit-linear-gradient(transparent, transparent), url(../../../../misc/message-ok.svg);
-  background-image: linear-gradient(transparent, transparent), url(../../../../misc/message-ok.svg);
+.messages--status:before {
+  background-image: -webkit-linear-gradient(transparent, transparent), url(../../images/message-ok.svg);
+  background-image: linear-gradient(transparent, transparent), url(../../images/message-ok.svg);
 }
 
-div.warning:before {
-  background-image: -webkit-linear-gradient(transparent, transparent), url(../../../../misc/message-warning.svg);
-  background-image: linear-gradient(transparent, transparent), url(../../../../misc/message-warning.svg);
+.messages--warning:before {
+  background-image: -webkit-linear-gradient(transparent, transparent), url(../../images/message-warning.svg);
+  background-image: linear-gradient(transparent, transparent), url(../../images/message-warning.svg);
 }
 
-div.error:before {
-  background-image: -webkit-linear-gradient(transparent, transparent), url(../../../../misc/message-error.svg);
-  background-image: linear-gradient(transparent, transparent), url(../../../../misc/message-error.svg);
+.messages--error:before {
+  background-image: -webkit-linear-gradient(transparent, transparent), url(../../images/message-error.svg);
+  background-image: linear-gradient(transparent, transparent), url(../../images/message-error.svg);
 }

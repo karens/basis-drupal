@@ -3,6 +3,10 @@
  * Tabledrag styling.
  */
 
+.field-multiple-drag {
+  position: relative;
+}
+
 table.stick-header {
   -webkit-transform: translate(2px, 0);
   transform: translate(2px, 0);
@@ -33,11 +37,13 @@ table.stick-header {
   margin: 0 0 0 -0.0625em; /* Nudge past the left border */
   padding: 0;
   background: #ebeff7;
-  -webkit-transform: translate(-100%, 0);
-  transform: translate(-100%, 0);
 }
 
 .draggable {
+  position: relative;
+}
+
+.draggable.drag td {
   position: relative;
 }
 

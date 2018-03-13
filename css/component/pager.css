@@ -2,7 +2,7 @@
  * @file
  * Pager styling.
  */
-ul.pager {
+.pager__items {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20,61 +20,54 @@ ul.pager {
   clear: both;
 }
 
-.no-flexbox .pager-first,
-.no-flexbox .pager-previous,
-.no-flexbox .pager-ellipsis,
-.no-flexbox .pager-current,
-.no-flexbox .pager-next,
-.no-flexbox .pager-last,
-.no-flexbox .pager-item {
+.no-flexbox .pager__item {
   float: left;
 }
 
-.pager-item,
-.pager-ellipsis {
+.pager__item,
+.pager__item--ellipsis {
   display: none;
 }
 
+.pager__item--first,
+.pager__item--next,
+.pager__item--previous,
+.pager__item--last {
+  display: block;
+}
+
 @media (min-width: 34em) {
-  .pager-item,
-  .pager-ellipsis {
+  .pager__item {
     display: block;
   }
 }
 
-.pager-first,
-.pager-previous,
-.pager-ellipsis,
-.pager-current,
-.pager-next,
-.pager-last,
-.pager-item {
+.pager__item {
   padding: 0.6em 1em;
   margin: 0;
 }
 
-.pager-ellipsis {
+.pager__item--ellipsis {
   padding-left: 0;
   padding-right: 0;
 }
 
-.pager-first a,
-.pager-previous a,
-.pager-next a,
-.pager-last a {
+.pager__item--first a,
+.pager__item--previous a,
+.pager__item--next a,
+.pager__item--last a {
   position: relative;
-  display: block;
+  width: 2.5em;
   text-indent: -9999em;
   overflow: hidden;
-  width: 2.5em;
 }
 
-.pager-first a:before,
-.pager-first a:after,
-.pager-previous a:before,
-.pager-next a:before,
-.pager-last a:before,
-.pager-last a:after {
+.pager__item--first a:before,
+.pager__item--first a:after,
+.pager__item--previous a:before,
+.pager__item--next a:before,
+.pager__item--last a:before,
+.pager__item--last a:after {
   content: '';
   position: absolute;
   top: 50%;
@@ -87,55 +80,52 @@ ul.pager {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.pager-first a:before,
-.pager-first a:after,
-.pager-previous a:before {
+.pager__item--first a:before,
+.pager__item--first a:after,
+.pager__item--previous a:before {
   border-top-width: 0;
   border-right-width: 0;
 }
 
-.pager-last a:before,
-.pager-last a:after,
-.pager-next a:before {
+.pager__item--last a:before,
+.pager__item--last a:after,
+.pager__item--next a:before {
   border-bottom-width: 0;
   border-left-width: 0;
 }
 
-.pager-first a:before,
-.pager-last a:before {
+.pager__item--first a:before,
+.pager__item--last a:before {
   margin-left: -0.1875rem;
 }
 
-.pager-last a:after,
-.pager-first a:after {
+.pager__item--last a:after,
+.pager__item--first a:after {
   margin-left: 0.1875rem;
 }
 
 @media (min-width: 48em) {
-  .pager-first a,
-  .pager-previous a,
-  .pager-next a,
-  .pager-last a {
+  .pager__item--first a,
+  .pager__item--previous a,
+  .pager__item--next a,
+  .pager__item--last a {
     text-indent: 0;
     overflow: visible;
     width: auto;
   }
 
-  .pager-first a:before,
-  .pager-first a:after,
-  .pager-previous a:before,
-  .pager-next a:before,
-  .pager-last a:before,
-  .pager-last a:after {
+  .pager__item--first a:before,
+  .pager__item--first a:after,
+  .pager__item--previous a:before,
+  .pager__item--next a:before,
+  .pager__item--last a:before,
+  .pager__item--last a:after {
     display: none;
   }
 }
 
-.pager-first a,
-.pager-previous a,
-.pager-next a,
-.pager-last a,
-.pager-item a {
+
+.pager__item a {
   margin: -0.6em -1em;
   padding: 0.6em 1em;
   text-decoration: none;

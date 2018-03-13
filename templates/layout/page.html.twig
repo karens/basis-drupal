@@ -64,13 +64,21 @@
     </header>
   {% endif %}
 
-  <div class="layout__breadcrumb">
-    <div class="layout__breadcrumb-inner container container-fluid">
-      {{ page.breadcrumb }}
+  {% if page.breadcrumb %}
+    <div class="layout__breadcrumb">
+      <div class="layout__breadcrumb-inner container container-fluid">
+        {{ page.breadcrumb }}
+      </div>
     </div>
-  </div>
+  {% endif %}
 
-  {{ page.help }}
+  {% if page.help %}
+    <div class="layout__help">
+      <div class="layout__help-inner container container-fluid">
+      {{ page.help }}
+      </div>
+    </div>
+  {% endif %}
 
   <main role="main" class="layout__main">
 
