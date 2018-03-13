@@ -1,0 +1,10 @@
+{
+  "name": "karens/basis_drupal",
+  "type": "drupal-custom-theme",
+  "description": "Fork of https://github.com/wesruv/basis-drupal.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": {
+  }
+}
