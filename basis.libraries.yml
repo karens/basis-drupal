@@ -21,6 +21,8 @@ global-styling:
       css/component/pager.css: {}
       css/component/hero.css: {}
       css/component/teasers.css: {}
+      css/component/article-teaser.css: {}
+      css/component/event-teaser.css: {}
     theme:
       css/skin.css: {}
       css/print.css: {}

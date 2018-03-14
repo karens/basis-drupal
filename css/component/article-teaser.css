@@ -1,0 +1,30 @@
+.article--teaser {
+  position: relative;
+  margin: 0 0 2em;
+  padding: 0 0 2em 6em;
+  font-size: 1rem;
+  border-bottom: 0.125em solid #eee;
+}
+
+.article--teaser .profile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.article--teaser .node__meta {
+  margin-top: -0.5em;
+}
+
+.article--teaser .node__links li {
+  padding-top: 0.5em;
+  float: left;
+}
+
+.article--teaser .node__links .node-readmore {
+  padding-top: 0;
+}
