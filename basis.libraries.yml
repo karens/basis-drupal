@@ -23,6 +23,7 @@ global-styling:
       css/component/teasers.css: {}
       css/component/article-teaser.css: {}
       css/component/event-teaser.css: {}
+      css/component/review-teaser.css: {}
     theme:
       css/skin.css: {}
       css/print.css: {}
