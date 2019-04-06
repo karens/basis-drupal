@@ -119,3 +119,14 @@
     padding: 1rem 1.25rem;
   }
 }
+
+.header-identity__site-name,
+.header-identity__logo-wrapper {
+  height: 60px;
+  padding: 0;
+  margin: 0;
+}
+
+.block-page-title-block {
+  clear: both;
+}
